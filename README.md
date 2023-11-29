@@ -1,4 +1,4 @@
 # Advent-Of-Code
-All of my solutions for AoC2022
+All of my yearly solutions for the annual Advent of Code event
 
 FOR EDUCATIONAL PURPOSES ONLY
