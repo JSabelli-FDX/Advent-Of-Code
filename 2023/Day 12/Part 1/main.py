@@ -15,6 +15,7 @@ def solve(input_file):
             if line == "": continue
 
             grid, nums = line.split()
+
             nums = list(map(int, nums.split(",")))
             sts = defaultdict(int)
 

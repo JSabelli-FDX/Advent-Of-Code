@@ -7,6 +7,7 @@ from collections import defaultdict
 
 def solve(input_file):
     ans = 0
+
     with open(input_file, 'r') as file:
         for line in file:
             line = line.strip()
@@ -18,15 +19,17 @@ def solve(input_file):
             nums = list(map(int, nums.split(",")))
             grid = grid + "?" + grid + "?" + grid + "?" + grid + "?" + grid
             nums = nums + nums + nums + nums + nums
-
             sts = defaultdict(int)
+
             sts[(0, 0)] += 1
 
             for i in range(len(grid)):
                 new_sts = defaultdict(int)
                 poss_chars = [grid[i]]
+
                 if grid[i] == "?":
                     poss_chars = [".", "#"]
+
                 for k, v in sts.items():
                     sofar, idx = k
                     for ch in poss_chars:
@@ -42,6 +45,7 @@ def solve(input_file):
                                     new_sts[(sofar, idx)] += v
                                 if ch == "#":
                                     new_sts[(sofar + 1, idx)] += v
+
                 sts = new_sts
 
             ans += sts[(0, len(nums))] + sts[(nums[-1], len(nums) - 1)]
