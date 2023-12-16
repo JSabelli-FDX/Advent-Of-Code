@@ -39,4 +39,4 @@ def hashmap_procedure(filename):
     return total_focusing_power
 
 
-print(hashmap_procedure('../Part 1/input.txt'))
+print(hashmap_procedure('input.txt'))
