@@ -22,14 +22,4 @@ def part1():
         res += abs(l1[i] - l2[i])
     return res
 
-
-def part2():
-    cnt = Counter(l2)
-    res = 0
-    for i in l1:
-        res += cnt[i] * i
-    return res
-
-
 print(part1())
-print(part2())
