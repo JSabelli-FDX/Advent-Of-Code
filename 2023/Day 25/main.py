@@ -2,7 +2,7 @@
 # Advent of Code 2023
 # Day 25: Snowverload
 
-import igraph
+import igraph 
 
 
 def get_input(day, year):
